@@ -1,298 +1,707 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Shubham Patel — Graphic Designer</title>
-<meta name="description" content="Portfolio of Shubham Patel, graphic designer for ad campaigns, packaging, branding and motion reels.">
-<meta property="og:title" content="Shubham Patel — Graphic Designer"><meta property="og:image" content="assets/hola-chess.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23FF6A33'/%3E%3Ctext x='32' y='41' font-size='26' font-family='Arial' font-weight='700' text-anchor='middle' fill='%230E0D0B'%3ESP%3C/text%3E%3C/svg%3E">
-
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shubham Patel — Graphic Designer · Portfolio 2026</title>
+<meta name="description" content="Shubham Patel — graphic designer from Rajkot, India. Social media posts, logo design, packaging and motion reels.">
+<meta property="og:title" content="Shubham Patel — Graphic Designer">
+<meta property="og:description" content="Social media posts, logos, packaging and motion reels.">
+<meta property="og:image" content="assets/hola-chess.jpg">
+<meta name="theme-color" content="#F3ECE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23D62E4C'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23F3ECE2'%3ESP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-body{margin:0;background:#0E0D0B}
-a{color:#F3EFE6}a:hover{color:#FF6A33}
+:root{
+  --paper:#F3ECE2;--paper-2:#EAE1D3;--ink:#1B1516;--ink-2:#4B4243;--muted:#6E6465;
+  --red:#D62E4C;--red-d:#A81F38;--line:#D9CDBC;--night:#141012;--night-2:#211B1D;
+  --ease:cubic-bezier(.2,.8,.2,1);--ease-io:cubic-bezier(.7,0,.2,1);
+}
 *{box-sizing:border-box}
-.syne{font-family:'Syne',sans-serif}
-.serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 'Inter',system-ui,sans-serif;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit}
+::selection{background:var(--red);color:var(--paper)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+.anton{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.005em;text-transform:uppercase}
+.script{font-family:'Great Vibes',cursive;font-weight:400;text-transform:none;letter-spacing:0}
+.eyebrow{font:600 13px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--red-d)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .35 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-@keyframes rise{from{transform:translateY(110%) rotate(6deg);opacity:0}to{transform:none;opacity:1}}
-@keyframes fadeUp{from{transform:translateY(28px);opacity:0}to{transform:none;opacity:1}}
-@keyframes float1{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-18px) rotate(-5deg)}}
-@keyframes float2{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-24px) rotate(9deg)}}
-@keyframes float3{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+/* ---------- preloader ---------- */
+.loader{position:fixed;inset:0;z-index:100;background:var(--red);color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;padding:28px;transition:transform 1s var(--ease-io)}
+.loader .count{font-family:'Anton',sans-serif;font-size:clamp(90px,22vw,300px);line-height:.8;align-self:flex-end}
+.loader .who{font:600 14px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.loaded .loader{transform:translateY(-100%)}
+html:not(.js) .loader{display:none}
+
+/* ---------- cursor ---------- */
+.cursor{position:fixed;left:0;top:0;z-index:90;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--red);pointer-events:none;display:grid;place-items:center;color:var(--paper);font:700 12px/1 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .3s;will-change:transform}
+.cursor span{opacity:0;transition:opacity .2s}
+.cursor.big{width:92px;height:92px;margin:-46px 0 0 -46px}
+.cursor.big span{opacity:1}
+@media (hover:none),(max-width:900px){.cursor{display:none}}
+
+/* ---------- progress ---------- */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--red);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+
+/* ---------- nav ---------- */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:transform .5s var(--ease),background .3s,box-shadow .3s}
+header.nav.scrolled{background:rgba(243,236,226,.86);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+header.nav.hide{transform:translateY(-100%)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 17px/1 'Inter',sans-serif}
+.logo b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--red);color:var(--paper);font:400 17px/1 'Anton',sans-serif;letter-spacing:.04em;transition:transform .6s var(--ease)}
+.logo:hover b{transform:rotate(360deg)}
+.menu{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.menu a{display:block;position:relative;overflow:hidden;padding:12px 14px;text-decoration:none;font-weight:500;font-size:15px}
+.menu a span{display:block;transition:transform .45s var(--ease)}
+.menu a span::after{content:attr(data-t);position:absolute;left:0;top:100%;color:var(--red-d)}
+.menu a:hover span{transform:translateY(-100%)}
+.hire{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:14px}
+.hire i{width:8px;height:8px;border-radius:50%;background:#58E08A;box-shadow:0 0 0 0 rgba(88,224,138,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{to{box-shadow:0 0 0 10px rgba(88,224,138,0)}}
+@media (max-width:860px){.menu{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;padding:120px 0 60px;display:flex;align-items:center;overflow:hidden}
+.loops{position:absolute;pointer-events:none;color:var(--red);opacity:.9}
+.loops path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.loaded .loops path{animation:draw 2.6s var(--ease) .9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero h1{margin:0;font-size:clamp(84px,17.5vw,268px);line-height:.84;color:var(--red);display:flex;flex-direction:column}
+.hero h1 .row{display:flex;gap:.04em;overflow:hidden;padding:.04em 0 0}
+.hero h1 .row .n{color:var(--ink)}
+.ch{display:inline-block}
+.js .ch{transform:translateY(105%)}
+.loaded .ch{transform:none;transition:transform 1.1s var(--ease)}
+.hero .sig{font-size:clamp(40px,6vw,88px);color:var(--ink);line-height:1;margin:-.15em 0 0 .2em;display:block}
+.js .hero .sig{opacity:0;transform:translateY(20px) rotate(-4deg)}
+.loaded .hero .sig{opacity:1;transform:rotate(-4deg);transition:all 1.2s var(--ease) 1.2s}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center;width:100%}
+.hero p.lead{max-width:520px;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);margin:34px 0 0}
+.js .fade-in{opacity:0;transform:translateY(24px)}
+.loaded .fade-in{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;align-items:center}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;height:60px;padding:0 30px;border-radius:999px;background:var(--red);color:var(--paper);text-decoration:none;font-weight:600;font-size:16px;overflow:hidden;isolation:isolate;transition:color .4s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);border-radius:inherit;transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover::before{transform:none}
+.btn svg{transition:transform .4s var(--ease)}
+.btn:hover svg{transform:rotate(45deg)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{color:var(--paper)}
+.stack{position:relative;height:min(620px,72vh)}
+.stack figure{position:absolute;margin:0;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(60,20,25,.35);border:6px solid #fff;will-change:transform}
+.stack figure img{width:100%;height:100%;object-fit:cover}
+.js .stack figure{opacity:0;scale:.8}
+.loaded .stack figure{opacity:1;scale:1;transition:opacity 1s var(--ease),scale 1.2s var(--ease)}
+.s1{width:48%;aspect-ratio:4/5;left:0;top:6%;rotate:-7deg}
+.s2{width:46%;aspect-ratio:4/5;right:0;top:0;rotate:6deg}
+.s3{width:50%;aspect-ratio:4/5;left:24%;bottom:0;rotate:-1deg;z-index:2}
+.badge{position:absolute;right:-6px;bottom:8%;z-index:3;width:138px;height:138px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center}
+.badge svg.ring{position:absolute;inset:0;animation:spin 16s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes marqueeR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,230,140,.6)}100%{box-shadow:0 0 0 12px rgba(94,230,140,0)}}
-@keyframes cardIn{from{transform:translateY(80px) scale(.94);opacity:0}to{transform:none;opacity:1}}
-@keyframes clipIn{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
-@keyframes blink{50%{opacity:0}}
+.scroll-hint{position:absolute;left:50%;bottom:22px;translate:-50% 0;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.scroll-hint i{width:1.5px;height:44px;background:linear-gradient(var(--red),transparent);animation:drip 1.8s var(--ease) infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.stack{height:440px;max-width:460px}.scroll-hint{display:none}}
 
-.line{display:block;overflow:hidden;padding-bottom:.04em}
-.ch{display:inline-block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
-.fade{animation:fadeUp .9s cubic-bezier(.2,.8,.2,1) both}
-.f1{animation:float1 7s ease-in-out infinite}
-.f2{animation:float2 8s ease-in-out infinite}
-.f3{animation:float3 6s ease-in-out infinite}
-.spin{animation:spin 14s linear infinite}
-.track{display:flex;width:max-content;animation:marquee 28s linear infinite}
-.trackR{display:flex;width:max-content;animation:marqueeR 34s linear infinite}
-.band:hover .track,.band:hover .trackR{animation-play-state:paused}
-.dot{animation:pulse 1.6s ease-out infinite}
-.caret{animation:blink 1s steps(1) infinite}
+/* ---------- marquee ---------- */
+.marquee{background:var(--red);color:var(--paper);padding:20px 0;overflow:hidden;transform:rotate(-2deg);margin:40px -20px;position:relative;z-index:2}
+.marquee.alt{background:var(--ink);transform:rotate(1.5deg);margin-top:-30px}
+.track{display:flex;width:max-content;gap:44px;animation:mq 30s linear infinite;font-size:clamp(30px,4.4vw,58px);white-space:nowrap;align-items:center}
+.marquee.alt .track{animation-direction:reverse;animation-duration:38s}
+.track .script{font-size:1.15em;text-transform:none;color:#FFD0D8}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-.navlink{position:relative;text-decoration:none;color:#F3EFE6;padding:12px 4px}
-.navlink::after{content:"";position:absolute;left:4px;right:4px;bottom:6px;height:2px;background:#FF6A33;transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
-.navlink:hover{color:#F3EFE6}
-.navlink:hover::after{transform:scaleX(1);transform-origin:left}
+/* ---------- section heads ---------- */
+section{position:relative;z-index:2}
+.sec{padding:140px 0 100px}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:60px}
+.head h2{margin:12px 0 0;font-size:clamp(56px,9vw,140px);line-height:.88;color:var(--ink)}
+.head h2 em{font-style:normal;color:var(--red)}
+.head h2 .script{color:var(--red);font-size:.7em;margin-left:.1em}
+.head p{max-width:420px;margin:0;color:var(--ink-2)}
+.num{font-family:'Anton',sans-serif;font-size:18px;color:var(--red);margin-right:10px}
 
-.chip{font:500 14px/1 'Inter',sans-serif;border:1px solid #3A372F;background:transparent;color:#F3EFE6;border-radius:999px;padding:0 20px;height:44px;cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .3s}
-.chip:hover{border-color:#FF6A33;transform:translateY(-2px)}
-.chip-on{background:#FF6A33;color:#0E0D0B;border-color:#FF6A33}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(60px)}
+.js .rv.in{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.04em}
+.js .split .w>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease);transition-delay:calc(var(--i)*70ms)}
+.js .split.in .w>span{transform:none}
 
-.work{position:relative;display:block;border-radius:22px;overflow:hidden;background:#1A1915;aspect-ratio:4/5;text-decoration:none;animation:cardIn .8s cubic-bezier(.2,.8,.2,1) both}
-.work img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter .6s}
-.work:hover img{transform:scale(1.08) rotate(.6deg)}
-.work .info{position:absolute;left:0;right:0;bottom:0;padding:22px;background:#0E0D0B;color:#F3EFE6;transform:translateY(101%);transition:transform .55s cubic-bezier(.2,.8,.2,1)}
-.work:hover .info,.work:focus-visible .info{transform:none}
-.work .tag{position:absolute;top:16px;left:16px;background:rgba(14,13,11,.82);color:#F3EFE6;border-radius:999px;padding:8px 14px;font:600 12px/1 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;transition:transform .5s}
-.work:hover .tag{transform:translateY(-4px)}
-.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.wgrid > :nth-child(3n+2){margin-top:72px}
+/* ---------- posts grid ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{height:44px;padding:0 20px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-weight:600;font-size:14px;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease)}
+.chip:hover{transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.posts .card:nth-child(3n+2){margin-top:80px}
+.card{position:relative;display:block;border:0;padding:0;background:var(--paper-2);border-radius:20px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/5;width:100%;text-align:left;color:inherit;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -25px rgba(60,20,25,.45)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.card:hover img{transform:scale(1.07)}
+.card .meta{position:absolute;left:14px;right:14px;bottom:14px;padding:16px 18px;border-radius:14px;background:rgba(243,236,226,.94);backdrop-filter:blur(6px);transform:translateY(calc(100% + 20px));transition:transform .6s var(--ease)}
+.card:hover .meta,.card:focus-visible .meta{transform:none}
+.card .meta b{display:block;font:400 22px/1.05 'Anton',sans-serif;text-transform:uppercase}
+.card .meta small{display:block;margin-top:4px;color:var(--ink-2);font-size:14px;line-height:1.4}
+.card .tag{position:absolute;top:14px;left:14px;padding:7px 12px;border-radius:999px;background:var(--red);color:var(--paper);font:600 11px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.card.hide{display:none}
+@media (max-width:900px){.posts{grid-template-columns:repeat(2,minmax(0,1fr))}.posts .card:nth-child(3n+2){margin-top:0}.posts .card:nth-child(2n){margin-top:50px}}
+@media (max-width:560px){.posts{grid-template-columns:1fr}.posts .card:nth-child(2n){margin-top:0}.card .meta{transform:none}}
 
-.phone{position:relative;border-radius:36px;padding:10px;background:#1E1C18;border:1px solid #3A372F;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.phone:hover{transform:translateY(-12px) rotate(-1.5deg)}
-.phone video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#000}
-.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start}
-.rgrid > :nth-child(2){margin-top:90px}
-
-.portrait{animation:clipIn 1.4s cubic-bezier(.7,0,.2,1) both}
-.portrait img{transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
-.portrait:hover img{transform:scale(1.06)}
-.skill{border:1px solid #3A372F;border-radius:999px;padding:10px 18px;font:500 15px/1.2 'Inter',sans-serif;color:#F3EFE6;transition:background .3s,color .3s}
-.skill:hover{background:#F3EFE6;color:#0E0D0B}
-
-.cta{display:inline-flex;align-items:center;gap:14px;background:#FF6A33;color:#0E0D0B;text-decoration:none;border-radius:999px;padding:0 34px;height:72px;font:700 20px/1 'Syne',sans-serif;transition:transform .4s cubic-bezier(.2,.8,.2,1),background .3s}
-.cta:hover{color:#0E0D0B;background:#F3EFE6;transform:scale(1.05) rotate(-2deg)}
-.cta svg{transition:transform .4s}
-.cta:hover svg{transform:rotate(45deg)}
-.mail{font-family:'Syne',sans-serif;font-weight:700;text-decoration:none;color:#F3EFE6;background-image:linear-gradient(#FF6A33,#FF6A33);background-size:0 3px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .5s}
-.mail:hover{background-size:100% 3px;color:#F3EFE6}
-
-@supports (animation-timeline: view()){
-  .rv{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
-  .work{animation:cardIn linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
-  .portrait{animation:clipIn linear both;animation-timeline:view();animation-range:entry 10% cover 45%}
-  .grow{animation:growX linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+/* ---------- horizontal series ---------- */
+.series{position:relative}
+.series-sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.series-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:34px}
+.series-top h3{margin:0;font-size:clamp(40px,5vw,72px);line-height:.9}
+.series-top h3 em{font-style:normal;color:var(--red)}
+.series-count{font:400 22px/1 'Anton',sans-serif;color:var(--muted)}
+.series-count b{color:var(--red);font-weight:400}
+.series-track{display:flex;gap:32px;padding-left:max(24px,calc((100vw - 1320px)/2 + 24px));will-change:transform}
+.slide{flex:0 0 min(72vw,980px);margin:0}
+.slide button{display:block;width:100%;padding:0;border:0;border-radius:22px;overflow:hidden;background:var(--paper-2);cursor:zoom-in;box-shadow:0 30px 60px -30px rgba(60,20,25,.45)}
+.slide img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform 1.2s var(--ease)}
+.slide button:hover img{transform:scale(1.04)}
+.slide figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:16px;font-size:15px;color:var(--ink-2)}
+.slide figcaption b{font:400 24px/1 'Anton',sans-serif;text-transform:uppercase;color:var(--ink)}
+.bar{height:3px;background:var(--line);border-radius:3px;margin-top:34px;overflow:hidden}
+.bar i{display:block;height:100%;width:100%;background:var(--red);transform-origin:0 50%;transform:scaleX(0)}
+@media (max-width:760px){
+  .series{height:auto!important}
+  .series-sticky{position:relative;height:auto;padding:40px 0}
+  .series-track{transform:none!important;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:24px;-webkit-overflow-scrolling:touch}
+  .slide{flex-basis:86vw;scroll-snap-align:start}
+  .bar{display:none}
 }
-@keyframes growX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
-@media (max-width:900px){
-  .wgrid,.rgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .wgrid > :nth-child(3n+2),.rgrid > :nth-child(2){margin-top:0}
-  .wgrid > :nth-child(2n){margin-top:48px}
-  .hero-stack{display:none !important}
-  .navlinks{display:none !important}
-}
-@media (max-width:560px){
-  .wgrid,.rgrid{grid-template-columns:minmax(0,1fr)}
-  .wgrid > :nth-child(2n){margin-top:0}
-  .work .info{transform:none}
-}
+/* ---------- logos ---------- */
+.logos{background:var(--paper-2);border-radius:48px 48px 0 0}
+.logo-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.lcard{position:relative;border-radius:26px;background:var(--paper);overflow:hidden;transform-style:preserve-3d;transition:transform .5s var(--ease),box-shadow .5s var(--ease);box-shadow:0 1px 0 var(--line)}
+.lcard:hover{box-shadow:0 40px 70px -35px rgba(60,20,25,.5)}
+.lcard .art{display:block;width:100%;padding:0;border:0;cursor:zoom-in;background:none;aspect-ratio:16/10;overflow:hidden}
+.lcard .art img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.lcard:hover .art img{transform:scale(1.05)}
+.lcard .body{padding:28px 30px 32px}
+.lcard h3{margin:0;font:400 clamp(34px,3.6vw,52px)/.95 'Anton',sans-serif;text-transform:uppercase}
+.lcard h3 .script{color:var(--red);font-size:.75em;margin-left:.15em}
+.lcard p{margin:14px 0 22px;color:var(--ink-2);max-width:520px}
+.swatches{display:flex;gap:10px;flex-wrap:wrap}
+.sw{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;font:600 13px/1 'Inter',monospace;letter-spacing:.04em;color:var(--ink-2)}
+.sw i{width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);transition:transform .4s var(--ease)}
+.sw:hover i{transform:scale(1.25)}
+.logo-solo{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;margin-top:28px;align-items:stretch}
+.logo-solo .mark{border-radius:26px;overflow:hidden;cursor:zoom-in;border:0;padding:0;background:none}
+.logo-solo .mark img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.logo-solo .mark:hover img{transform:scale(1.06) rotate(-1deg)}
+.process{border-radius:26px;background:var(--ink);color:var(--paper);padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.process h3{margin:0;font:400 clamp(36px,4vw,60px)/.92 'Anton',sans-serif;text-transform:uppercase}
+.process h3 .script{color:#FF8FA3;font-size:.8em}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.steps li{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(243,236,226,.16)}
+.steps li b{font:400 18px/1 'Anton',sans-serif;color:#FF8FA3;min-width:28px}
+@media (max-width:900px){.logo-row,.logo-solo{grid-template-columns:1fr}}
+
+/* ---------- packaging ---------- */
+.pack{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:center}
+.pack .hero-pack{position:relative;border-radius:26px;overflow:hidden;border:0;padding:0;cursor:zoom-in;background:none;aspect-ratio:4/5}
+.pack .hero-pack img{width:100%;height:110%;object-fit:cover;will-change:transform}
+.pack .copy h3{margin:0;font:400 clamp(44px,6vw,92px)/.88 'Anton',sans-serif;text-transform:uppercase}
+.pack .copy h3 em{font-style:normal;color:var(--red)}
+.pack .copy p{color:var(--ink-2);max-width:520px}
+.pack .wide{display:block;width:100%;margin-top:26px;border-radius:20px;overflow:hidden;border:0;padding:0;cursor:zoom-in;background:none}
+.pack .wide img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform 1.2s var(--ease)}
+.pack .wide:hover img{transform:scale(1.04)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
+.facts li{padding:10px 16px;border-radius:999px;border:1.5px solid var(--ink);font-weight:600;font-size:14px}
+@media (max-width:900px){.pack{grid-template-columns:1fr}}
+
+/* ---------- videos ---------- */
+.videos{background:var(--night);color:var(--paper);border-radius:48px 48px 0 0;overflow:hidden}
+.videos .head h2{color:var(--paper)}
+.videos .head p{color:#C9BFBF}
+.videos .eyebrow{color:#FF8FA3}
+.reels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start}
+.reels .reel:nth-child(2){margin-top:110px}
+.phone{position:relative;padding:10px;border-radius:40px;background:var(--night-2);box-shadow:0 0 0 1.5px #3A3033,0 40px 80px -30px rgba(214,46,76,.45);transition:transform .7s var(--ease)}
+.phone::before{content:"";position:absolute;top:20px;left:50%;translate:-50% 0;width:70px;height:6px;border-radius:6px;background:#000;z-index:2;opacity:.7}
+.reel:hover .phone{transform:translateY(-14px) rotate(-1.5deg)}
+.phone video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:31px;background:#000}
+.sound{position:absolute;right:22px;bottom:22px;z-index:3;width:48px;height:48px;border-radius:50%;border:0;background:rgba(243,236,226,.92);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .3s var(--ease),background .3s}
+.sound:hover{transform:scale(1.1);background:var(--red);color:var(--paper)}
+.reel figcaption{margin-top:22px}
+.reel figcaption b{display:block;font:400 28px/1 'Anton',sans-serif;text-transform:uppercase}
+.reel figcaption span{color:#C9BFBF;font-size:15px}
+@media (max-width:900px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.reels .reel:nth-child(2){margin-top:0}}
+@media (max-width:560px){.reels{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.portrait{position:relative}
+.portrait .frame{border-radius:300px 300px 28px 28px;overflow:hidden;aspect-ratio:3/4}
+.js .portrait .frame{clip-path:inset(100% 0 0 0)}
+.js .portrait.in .frame{clip-path:inset(0 0 0 0);transition:clip-path 1.6s var(--ease-io)}
+.portrait img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 2s var(--ease)}
+.portrait.in img{transform:scale(1)}
+.portrait .stamp{position:absolute;left:-18px;bottom:40px;padding:14px 20px;border-radius:16px;background:var(--red);color:var(--paper);rotate:-6deg;box-shadow:0 20px 40px -20px rgba(214,46,76,.7)}
+.portrait .stamp b{display:block;font:400 34px/1 'Anton',sans-serif}
+.portrait .stamp span{font-size:13px;font-weight:600;letter-spacing:.06em}
+.about-copy h2{margin:12px 0 0;font:400 clamp(48px,6.5vw,104px)/.88 'Anton',sans-serif;text-transform:uppercase}
+.about-copy h2 .script{color:var(--red);font-size:.66em}
+.about-copy .bio{font-size:19px;color:var(--ink-2);margin:28px 0 0}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px}
+.cols h4{margin:0 0 14px;font:400 26px/1 'Anton',sans-serif;text-transform:uppercase;color:var(--red)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{padding:14px 0;border-top:1.5px solid var(--line)}
+.tl li b{display:block;font-weight:600}
+.tl li span{color:var(--muted);font-size:15px}
+.tools{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;align-items:center}
+.tool{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font:700 24px/1 'Inter',sans-serif;transition:transform .4s var(--ease)}
+.tool:hover{transform:translateY(-6px) rotate(-6deg)}
+.t-ai{background:#2B1400;color:#FF9A00}.t-ps{background:#001E36;color:#31A8FF}.t-pr{background:#2A0035;color:#D99AFF}
+.tools small{color:var(--muted);font-size:14px;margin-left:6px}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.portrait{max-width:440px}.cols{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--red);color:var(--paper);overflow:hidden}
+.contact .eyebrow{color:#FFD0D8}
+.contact h2{margin:16px 0 0;font:400 clamp(70px,14vw,230px)/.84 'Anton',sans-serif;text-transform:uppercase}
+.contact h2 .script{text-transform:none;font-size:.6em;color:var(--ink)}
+.mail{display:inline-block;margin-top:46px;font:400 clamp(26px,4vw,58px)/1.1 'Anton',sans-serif;color:var(--paper);text-decoration:none;background:linear-gradient(var(--paper),var(--paper)) 0 100%/0 3px no-repeat;transition:background-size .6s var(--ease);overflow-wrap:anywhere}
+.mail:hover{background-size:100% 3px}
+.socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.socials a{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:999px;border:1.5px solid var(--paper);color:var(--paper);text-decoration:none;font-weight:600;transition:background .3s,color .3s}
+.socials a:hover{background:var(--paper);color:var(--red-d)}
+.contact .btn{background:var(--ink)}
+.contact .btn::before{background:var(--paper)}
+.contact .btn:hover{color:var(--ink)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:110px;padding:26px 0 34px;border-top:1px solid rgba(243,236,226,.35);font-size:14px}
+footer a{color:var(--paper)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:95;background:rgba(20,16,18,.92);display:grid;place-items:center;padding:60px 20px;opacity:0;pointer-events:none;transition:opacity .4s}
+.lb.open{opacity:1;pointer-events:auto}
+.lb img{max-height:84vh;width:auto;max-width:min(1200px,94vw);border-radius:14px;transform:scale(.92);transition:transform .5s var(--ease)}
+.lb.open img{transform:none}
+.lb p{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:var(--paper);margin:0;font-size:15px}
+.lb .x,.lb .nav-b{position:absolute;width:52px;height:52px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .3s var(--ease),background .3s}
+.lb .x:hover,.lb .nav-b:hover{transform:scale(1.1);background:var(--red);color:var(--paper)}
+.lb .x{top:18px;right:18px}
+.lb .prev{left:18px;top:50%;translate:0 -50%}
+.lb .next{right:18px;top:50%;translate:0 -50%}
+
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none !important;transition:none !important}
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv,.js .split .w>span,.js .ch,.js .fade-in,.js .stack figure,.js .hero .sig{opacity:1!important;transform:none!important;scale:1!important}
+  .js .portrait .frame{clip-path:none!important}
+  .loops path{stroke-dashoffset:0!important}
 }
 </style>
+</head>
+<body>
 
-<style>html{scroll-behavior:smooth}</style>
-</head><body>
-
-<div style="width: 100%; min-height: 100vh; background: #0E0D0B; color: #F3EFE6; font-family: 'Inter', sans-serif; overflow-x: clip">
-
-<!-- NAV -->
-<header style="position: sticky; top: 0; z-index: 20; background: rgba(14,13,11,.86); backdrop-filter: blur(10px); border-bottom: 1px solid #24221D">
-<nav style="max-width: 1320px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
-<a href="#top" class="syne" style="text-decoration: none; display: flex; align-items: center; gap: 12px; color: #F3EFE6; font-weight: 800; font-size: 20px; letter-spacing: -.02em">
-<span style="display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #FF6A33; color: #0E0D0B; font-size: 16px">SP</span>
-Shubham Patel
-</a>
-<div class="navlinks" style="display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
-<a class="navlink" href="#work">Work</a>
-<a class="navlink" href="#reels">Motion</a>
-<a class="navlink" href="#about">About</a>
-<a class="navlink" href="#contact">Contact</a>
+<div class="loader" aria-hidden="true">
+  <span class="who">Shubham Patel — Portfolio 2026</span>
+  <span class="count" id="count">0</span>
 </div>
-<a href="mailto:shubhampatel28702@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid #3A372F; border-radius: 999px; padding: 0 18px; height: 44px; font-size: 14px; font-weight: 500; text-decoration: none; color: #F3EFE6">
-<span class="dot" style="width: 9px; height: 9px; border-radius: 50%; background: #5EE68C; display: inline-block"></span>
-Available for projects
-</a>
-</nav>
+<div class="cursor" aria-hidden="true"><span>View</span></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" data-magnetic><b>SP</b>Shubham Patel</a>
+    <nav aria-label="Main">
+      <ul class="menu">
+        <li><a href="#posts"><span data-t="Posts">Posts</span></a></li>
+        <li><a href="#logos"><span data-t="Logos">Logos</span></a></li>
+        <li><a href="#packaging"><span data-t="Packaging">Packaging</span></a></li>
+        <li><a href="#videos"><span data-t="Videos">Videos</span></a></li>
+        <li><a href="#about"><span data-t="About">About</span></a></li>
+      </ul>
+    </nav>
+    <a class="hire" href="#contact" data-magnetic><i></i>Hire me</a>
+  </div>
 </header>
 
+<main>
 <!-- HERO -->
-<section id="top" style="max-width: 1320px; margin: 0 auto; padding: 72px 24px 96px; position: relative">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px">
-<div style="flex: 999 1 560px; min-width: 0">
-<p class="fade" style="margin: 0 0 28px; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: #A8A296; animation-delay: .1s">Graphic Designer · Ads · Packaging · Branding</p>
-<h1 class="syne" style="margin: 0; font-weight: 800; font-size: clamp(64px, 12vw, 184px); line-height: .88; letter-spacing: -.045em; text-transform: uppercase">
-<span class="line"><span class="ch" style="animation-delay: .15s">S</span><span class="ch" style="animation-delay: .19s">h</span><span class="ch" style="animation-delay: .23s">u</span><span class="ch" style="animation-delay: .27s">b</span><span class="ch" style="animation-delay: .31s">h</span><span class="ch" style="animation-delay: .35s">a</span><span class="ch" style="animation-delay: .39s">m</span></span>
-<span class="line"><span class="ch" style="animation-delay: .45s">P</span><span class="ch" style="animation-delay: .49s">a</span><span class="ch" style="animation-delay: .53s">t</span><span class="ch" style="animation-delay: .57s">e</span><span class="ch" style="animation-delay: .61s">l</span><span class="ch" style="animation-delay: .7s; color: #FF6A33">.</span></span>
-</h1>
-<p class="fade" style="margin: 36px 0 0; max-width: 560px; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: #D9D4C9; animation-delay: .9s">I design scroll-stopping <span class="serif" style="font-size: 1.25em; color: #FF6A33">ad campaigns</span>, packaging and brand identities for food, fragrance and jewellery brands — from the first sketch to the final reel.</p>
-<div class="fade" style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; animation-delay: 1.1s">
-<a class="cta" href="#work">See my work
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
-</a>
-<a href="#contact" style="font-size: 16px; font-weight: 500; padding: 14px 6px">Let’s talk →</a>
-</div>
-</div>
+<section class="hero" id="top">
+  <svg class="loops" style="left:-60px;top:80px;width:360px" viewBox="0 0 360 260" aria-hidden="true"><path pathLength="1" d="M10 210 C 80 40, 260 20, 250 120 C 240 220, 90 210, 120 130 C 150 50, 300 60, 350 150"/></svg>
+  <svg class="loops" style="right:-40px;top:110px;width:300px" viewBox="0 0 300 240" aria-hidden="true"><path pathLength="1" d="M290 20 C 180 30, 120 120, 190 160 C 260 200, 280 90, 200 80 C 100 70, 40 170, 10 230"/></svg>
+  <svg class="loops" style="right:28%;bottom:40px;width:220px" viewBox="0 0 220 120" aria-hidden="true"><path pathLength="1" d="M10 100 C 60 10, 120 10, 110 60 C 100 110, 40 80, 90 40 C 140 0, 200 30, 210 90"/></svg>
 
-<div class="hero-stack" style="flex: 1 1 380px; position: relative; height: 560px; min-width: 340px">
-<div class="f1" style="position: absolute; left: 0; top: 40px; width: 230px; border-radius: 18px; overflow: hidden; border: 6px solid #F3EFE6">
-<img src="assets/hola-chess.jpg" alt="hola. Brute Musk fragrance ad with chess pieces" style="width: 100%; display: block">
-</div>
-<div class="f2" style="position: absolute; right: 0; top: 0; width: 220px; border-radius: 18px; overflow: hidden; border: 6px solid #F3EFE6; animation-delay: -2s">
-<img src="assets/dubai-kunafa.jpg" alt="Desi Mastaani Dubai Kunafa candy packaging" style="width: 100%; display: block">
-</div>
-<div class="f3" style="position: absolute; left: 90px; bottom: 0; width: 240px; border-radius: 18px; overflow: hidden; border: 6px solid #F3EFE6; animation-delay: -4s">
-<img src="assets/dingwani-mixture.jpg" alt="Dingwani Foods Khatta Meetha ad" style="width: 100%; display: block">
-</div>
-<div style="position: absolute; right: 10px; bottom: 40px; width: 150px; height: 150px; border-radius: 50%; background: #FF6A33; color: #0E0D0B; display: grid; place-items: center">
-<svg class="spin" viewBox="0 0 150 150" width="150" height="150" aria-hidden="true" style="position: absolute; inset: 0">
-<defs><path id="circ" d="M75,75 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"></path></defs>
-<text style="font: 700 13.5px 'Syne', sans-serif; letter-spacing: 3px" fill="#0E0D0B"><textPath href="#circ">DESIGN • ADS • PACKAGING • REELS • </textPath></text>
-</svg>
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg>
-</div>
-</div>
-</div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow fade-in" style="transition-delay:.5s">Graphic Designer · Rajkot, India</p>
+      <h1 class="anton" aria-label="Portfolio 2026">
+        <span class="row"><span class="ch" style="transition-delay:.15s">P</span><span class="ch" style="transition-delay:.2s">o</span><span class="ch" style="transition-delay:.25s">r</span><span class="ch" style="transition-delay:.3s">t</span><span class="ch n" style="transition-delay:.4s">2</span><span class="ch n" style="transition-delay:.45s">0</span></span>
+        <span class="row"><span class="ch" style="transition-delay:.3s">f</span><span class="ch" style="transition-delay:.35s">o</span><span class="ch" style="transition-delay:.4s">l</span><span class="ch" style="transition-delay:.45s">i</span><span class="ch" style="transition-delay:.5s">o</span><span class="ch n" style="transition-delay:.6s">2</span><span class="ch n" style="transition-delay:.65s">6</span></span>
+      </h1>
+      <span class="script sig">Shubham Patel</span>
+      <p class="lead fade-in" style="transition-delay:1.4s">I design social media creatives, advertising visuals and brand identities that help businesses connect with their audience — from scroll-stopping posts to logos and packaging.</p>
+      <div class="cta-row fade-in" style="transition-delay:1.55s">
+        <a class="btn" href="#posts" data-magnetic>View my work
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="btn ghost" href="#contact" data-magnetic>Let’s talk</a>
+      </div>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <figure class="s1" data-depth="18" style="transition-delay:1s"><img src="assets/hola-chess.jpg" alt=""></figure>
+      <figure class="s2" data-depth="30" style="transition-delay:1.15s"><img src="assets/dingwani-mixture.jpg" alt=""></figure>
+      <figure class="s3" data-depth="10" style="transition-delay:1.3s"><img src="assets/dubai-kunafa.jpg" alt=""></figure>
+      <div class="badge">
+        <svg class="ring" viewBox="0 0 138 138" width="138" height="138"><defs><path id="c" d="M69 69m-52 0a52 52 0 1 1 104 0a52 52 0 1 1-104 0"/></defs><text fill="#F3ECE2" style="font:700 12.5px Inter,sans-serif;letter-spacing:3.2px"><textPath href="#c">POSTS • LOGOS • PACKAGING • REELS •</textPath></text></svg>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D62E4C" stroke-width="2.6" stroke-linecap="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Scroll<i></i></div>
 </section>
 
-<!-- MARQUEE -->
-<section class="band" aria-label="Services" style="border-top: 1px solid #24221D; border-bottom: 1px solid #24221D; overflow: hidden">
-<div style="background: #FF6A33; color: #0E0D0B; padding: 22px 0; transform: rotate(-1.5deg) scale(1.03); margin: 18px 0 0">
-<div class="track syne" style="font-weight: 800; font-size: clamp(28px, 4vw, 52px); text-transform: uppercase; letter-spacing: -.02em; gap: 40px; white-space: nowrap">
-<span>Social Media Ads ✦</span><span>Packaging Design ✦</span><span>Brand Identity ✦</span><span>Logo Design ✦</span><span>Motion Reels ✦</span><span>Festive Campaigns ✦</span>
-<span>Social Media Ads ✦</span><span>Packaging Design ✦</span><span>Brand Identity ✦</span><span>Logo Design ✦</span><span>Motion Reels ✦</span><span>Festive Campaigns ✦</span>
+<div class="marquee" aria-hidden="true">
+  <div class="track anton"><span>Social Media Posts</span><span class="script">&amp;</span><span>Logo Design</span><span class="script">&amp;</span><span>Packaging</span><span class="script">&amp;</span><span>Motion Reels</span><span class="script">&amp;</span><span>Advertising</span><span class="script">&amp;</span><span>Social Media Posts</span><span class="script">&amp;</span><span>Logo Design</span><span class="script">&amp;</span><span>Packaging</span><span class="script">&amp;</span><span>Motion Reels</span><span class="script">&amp;</span><span>Advertising</span><span class="script">&amp;</span></div>
 </div>
+<div class="marquee alt" aria-hidden="true">
+  <div class="track anton"><span>Food &amp; Snacks ✦</span><span>Fragrance ✦</span><span>Jewellery ✦</span><span>Logistics ✦</span><span>Healthcare ✦</span><span>Construction ✦</span><span>Food &amp; Snacks ✦</span><span>Fragrance ✦</span><span>Jewellery ✦</span><span>Logistics ✦</span><span>Healthcare ✦</span><span>Construction ✦</span></div>
 </div>
-<div style="padding: 20px 0 26px">
-<div class="trackR serif" style="font-size: clamp(26px, 3.4vw, 44px); color: #A8A296; gap: 48px; white-space: nowrap">
-<span>food &amp; snacks</span><span>·</span><span>fragrance</span><span>·</span><span>jewellery</span><span>·</span><span>beauty</span><span>·</span><span>FMCG</span><span>·</span><span>festive season</span><span>·</span>
-<span>food &amp; snacks</span><span>·</span><span>fragrance</span><span>·</span><span>jewellery</span><span>·</span><span>beauty</span><span>·</span><span>FMCG</span><span>·</span><span>festive season</span><span>·</span>
-</div>
-</div>
+
+<!-- POSTS -->
+<section class="sec" id="posts">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="num">01</span>Social media posts</p>
+        <h2 class="anton split">Posts that <em>stop</em> the scroll</h2>
+      </div>
+      <div class="chips" role="group" aria-label="Filter posts">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-f="food" aria-pressed="false">Food</button>
+        <button class="chip" type="button" data-f="fragrance" aria-pressed="false">Fragrance</button>
+        <button class="chip" type="button" data-f="jewellery" aria-pressed="false">Jewellery</button>
+      </div>
+    </div>
+    <div class="posts" id="postGrid">
+      <button class="card rv" data-cat="fragrance" data-lb="assets/hola-chess.jpg" data-cap="hola. — Make Your Move · Fragrance campaign" data-cursor>
+        <img src="assets/hola-chess.jpg" alt="hola. Brute Musk perfume held over a toppled chess king" loading="lazy">
+        <span class="tag">Fragrance</span>
+        <span class="meta"><b>hola. — Make your move</b><small>Chess-themed campaign for Brute Musk.</small></span>
+      </button>
+      <button class="card rv" style="--d:.1s" data-cat="food" data-lb="assets/dingwani-wafer.jpg" data-cap="The Snack You’d Rather Not Share · Dingwani Foods" data-cursor>
+        <img src="assets/dingwani-wafer.jpg" alt="Dingwani Foods ad with a girl hugging wafer packs" loading="lazy">
+        <span class="tag">Food</span>
+        <span class="meta"><b>The snack you’d rather not share</b><small>Playful campaign for Dingwani wafers.</small></span>
+      </button>
+      <button class="card rv" style="--d:.2s" data-cat="jewellery" data-lb="assets/ivaan-jewels.jpg" data-cap="This Season of Lights · Ivaan Jewels" data-cursor>
+        <img src="assets/ivaan-jewels.jpg" alt="Ivaan Jewels festive post with three necklace looks" loading="lazy">
+        <span class="tag">Jewellery</span>
+        <span class="meta"><b>This season of lights</b><small>Festive collage for Ivaan Jewels.</small></span>
+      </button>
+      <button class="card rv" data-cat="food" data-lb="assets/dingwani-mixture.jpg" data-cap="Busy? Yes. With the good stuff. · Dingwani Foods" data-cursor>
+        <img src="assets/dingwani-mixture.jpg" alt="Grandmother in sunglasses holding Dingwani Khatta Meetha mixture" loading="lazy">
+        <span class="tag">Food</span>
+        <span class="meta"><b>Busy? Yes.</b><small>Bold, cheeky ad for Khatta Meetha mixture.</small></span>
+      </button>
+      <button class="card rv" style="--d:.1s" data-cat="jewellery" data-lb="assets/teardrop.jpg" data-cap="Teardrop Earrings · Jewellery creative" data-cursor>
+        <img src="assets/teardrop.jpg" alt="Rose-gold teardrop earrings held up to the camera" loading="lazy">
+        <span class="tag">Jewellery</span>
+        <span class="meta"><b>Teardrop earrings</b><small>Clean product creative with a detail inset.</small></span>
+      </button>
+      <button class="card rv" style="--d:.2s" data-cat="food" data-lb="assets/dubai-kunafa.jpg" data-cap="Dubai Kunafa Candy · Desi Mastaani" data-cursor>
+        <img src="assets/dubai-kunafa.jpg" alt="Desi Mastaani Dubai Kunafa candy box in a milk splash" loading="lazy">
+        <span class="tag">Food</span>
+        <span class="meta"><b>Dubai Kunafa candy</b><small>Hero product visual for Desi Mastaani.</small></span>
+      </button>
+    </div>
+  </div>
 </section>
 
-<!-- WORK -->
-<section id="work" style="max-width: 1320px; margin: 0 auto; padding: 128px 24px 96px">
-<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px; margin-bottom: 56px">
-<div>
-<p style="margin: 0 0 14px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #FF6A33">(01) Selected work</p>
-<h2 class="syne" style="margin: 0; font-weight: 800; font-size: clamp(44px, 6.4vw, 96px); line-height: .95; letter-spacing: -.04em">Designs that <span class="serif" style="font-weight: 400; letter-spacing: -.01em">sell</span> the story.</h2>
-</div>
-<div role="group" aria-label="Filter projects" style="display: flex; flex-wrap: wrap; gap: 10px">
-<button type="button" class="chip chip-on" data-f="all" aria-pressed="true">All work</button><button type="button" class="chip" data-f="ads" aria-pressed="false">Social ads</button><button type="button" class="chip" data-f="pack" aria-pressed="false">Packaging</button><button type="button" class="chip" data-f="brand" aria-pressed="false">Branding</button>
-</div>
-</div>
-
-<div class="wgrid" id="wgrid"><a class="work" data-cat="ads" href="assets/hola-chess.jpg" target="_blank" rel="noopener" aria-label="hola. — Make Your Move — view full image">
-<img src="assets/hola-chess.jpg" alt="hola. Brute Musk perfume held over a toppled chess king" loading="lazy"><span class="tag">Social Ad</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">hola. — Make Your Move</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Fragrance campaign pairing a chess checkmate with a confident brand line.</span></span></a>
-<a class="work" data-cat="pack" href="assets/dubai-kunafa.jpg" target="_blank" rel="noopener" aria-label="Dubai Kunafa Candy — view full image">
-<img src="assets/dubai-kunafa.jpg" alt="Desi Mastaani Dubai Kunafa candy box in a milk splash" loading="lazy"><span class="tag">Packaging</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">Dubai Kunafa Candy</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Box design and hero visual for Desi Mastaani’s pistachio kunafa bar.</span></span></a>
-<a class="work" data-cat="brand" href="assets/everup-logo.jpg" target="_blank" rel="noopener" aria-label="Everup Lady — view full image">
-<img src="assets/everup-logo.jpg" alt="Everup lady script logo with a line-art hummingbird" loading="lazy"><span class="tag">Branding</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">Everup Lady</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Script wordmark with a single-line hummingbird for a feminine-care brand.</span></span></a>
-<a class="work" data-cat="ads" href="assets/ivaan-jewels.jpg" target="_blank" rel="noopener" aria-label="Season of Lights — view full image">
-<img src="assets/ivaan-jewels.jpg" alt="Ivaan Jewels festive post with three necklace looks" loading="lazy"><span class="tag">Social Ad</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">Season of Lights</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Ivaan Jewels festive collage — paper texture, paperclip and palace backdrop.</span></span></a>
-<a class="work" data-cat="ads" href="assets/teardrop.jpg" target="_blank" rel="noopener" aria-label="Teardrop Earrings — view full image">
-<img src="assets/teardrop.jpg" alt="Rose-gold teardrop earrings held up to the camera" loading="lazy"><span class="tag">Social Ad</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">Teardrop Earrings</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Clean jewellery product creative with a detail inset.</span></span></a>
-<a class="work" data-cat="ads" href="assets/dingwani-wafer.jpg" target="_blank" rel="noopener" aria-label="The Snack You’d Rather Not Share — view full image">
-<img src="assets/dingwani-wafer.jpg" alt="Dingwani Foods ad with a girl hugging wafer packs" loading="lazy"><span class="tag">Social Ad</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">The Snack You’d Rather Not Share</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Playful Dingwani Foods campaign for the wafer range.</span></span></a>
-<a class="work" data-cat="ads" href="assets/dingwani-mixture.jpg" target="_blank" rel="noopener" aria-label="Busy? Yes. — view full image">
-<img src="assets/dingwani-mixture.jpg" alt="Grandmother in sunglasses holding Dingwani Khatta Meetha mixture" loading="lazy"><span class="tag">Social Ad</span>
-<span class="info"><span class="syne" style="display:block;font-weight:700;font-size:24px;letter-spacing:-.02em">Busy? Yes.</span><span style="display:block;margin-top:6px;font-size:15px;line-height:1.45;color:#C9C3B6">Bold, cheeky Dingwani Foods ad for Khatta Meetha mixture.</span></span></a>
-</div>
+<!-- POST SERIES (horizontal) -->
+<section class="series" id="series" aria-label="Campaign series">
+  <div class="series-sticky">
+    <div class="wrap series-top">
+      <h3 class="anton">Campaign <em>series</em></h3>
+      <span class="series-count"><b id="sIdx">01</b> / 05</span>
+    </div>
+    <div class="series-track" id="sTrack">
+      <figure class="slide"><button type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/f87163252412211.6a4eb4efd1435.jpg" data-cap="Instagram posts · Food &amp; desserts" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f87163252412211.6a4eb4efd1435.jpg" alt="Three Instagram posts for summer desserts: snow cone, falooda and gajar halwa sizzler" loading="lazy"></button><figcaption><b>Food &amp; desserts</b><span>Instagram</span></figcaption></figure>
+      <figure class="slide"><button type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/390273252412211.6a4eb4efcf92e.jpg" data-cap="LifeWear · Healthcare product posts" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/390273252412211.6a4eb4efcf92e.jpg" alt="LifeWear posts for a wrist wrap, tennis elbow brace and cervical pillow" loading="lazy"></button><figcaption><b>LifeWear</b><span>Healthcare · Instagram</span></figcaption></figure>
+      <figure class="slide"><button type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/3dfabc252412211.6a4eb4efd3436.jpg" data-cap="Jewellery storytelling posts" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3dfabc252412211.6a4eb4efd3436.jpg" alt="Three minimal jewellery posts with earrings, a necklace and a ring" loading="lazy"></button><figcaption><b>Quiet luxury jewellery</b><span>Instagram</span></figcaption></figure>
+      <figure class="slide"><button type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/1f07bf252412211.6a4eb4efd4c21.jpg" data-cap="SameDay Logistics · LinkedIn posts" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1f07bf252412211.6a4eb4efd4c21.jpg" alt="Three LinkedIn posts for a logistics company featuring trucks and a race car" loading="lazy"></button><figcaption><b>SameDay Logistics</b><span>LinkedIn</span></figcaption></figure>
+      <figure class="slide"><button type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/0850e2252412211.6a4eb4efd019c.jpg" data-cap="Steel industry · LinkedIn posts" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0850e2252412211.6a4eb4efd019c.jpg" alt="Three LinkedIn posts about steel quality on construction sites" loading="lazy"></button><figcaption><b>Not all steel is equal</b><span>Construction · LinkedIn</span></figcaption></figure>
+    </div>
+    <div class="wrap"><div class="bar"><i id="sBar"></i></div></div>
+  </div>
 </section>
 
-<!-- REELS -->
-<section id="reels" style="background: #F3EFE6; color: #0E0D0B; border-radius: 48px 48px 0 0; padding: 120px 24px 140px">
-<div style="max-width: 1320px; margin: 0 auto">
-<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px; margin-bottom: 64px">
-<div>
-<p style="margin: 0 0 14px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #B8410F">(02) Motion &amp; reels</p>
-<h2 class="syne" style="margin: 0; font-weight: 800; font-size: clamp(44px, 6.4vw, 96px); line-height: .95; letter-spacing: -.04em">Designs that <span class="serif" style="font-weight: 400; color: #B8410F">move</span>.</h2>
-</div>
-<p style="margin: 0; max-width: 420px; font-size: 18px; line-height: 1.55; color: #4A463D">Vertical reels and Meta ads built for Instagram — product films, festive gift guides and brand stories. Tap a reel to unmute.</p>
-</div>
-<div class="rgrid">
-<figure class="rv" style="margin: 0">
-<div class="phone"><video src="assets/midnight-venom.mp4" poster="assets/midnight-venom-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Midnight Venom product reel"></video></div>
-<figcaption style="margin-top: 20px"><span class="syne" style="display: block; font-weight: 700; font-size: 24px; letter-spacing: -.02em">Midnight Venom</span><span style="font-size: 15px; color: #4A463D">hola. fragrance · Product reel</span></figcaption>
-</figure>
-<figure class="rv" style="margin: 0">
-<div class="phone"><video src="assets/reel-01.mp4" poster="assets/reel-01-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="What to gift this Dhanteras reel"></video></div>
-<figcaption style="margin-top: 20px"><span class="syne" style="display: block; font-weight: 700; font-size: 24px; letter-spacing: -.02em">What to Gift this Dhanteras</span><span style="font-size: 15px; color: #4A463D">Festive gift guide · Instagram reel</span></figcaption>
-</figure>
-<figure class="rv" style="margin: 0">
-<div class="phone"><video src="assets/meta-ad.mp4" poster="assets/meta-ad-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Desi Mastaani franchise Meta ad"></video></div>
-<figcaption style="margin-top: 20px"><span class="syne" style="display: block; font-weight: 700; font-size: 24px; letter-spacing: -.02em">Build a Business</span><span style="font-size: 15px; color: #4A463D">Desi Mastaani · Meta ad reel</span></figcaption>
-</figure>
-</div>
-</div>
+<!-- LOGOS -->
+<section class="sec logos" id="logos">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="num">02</span>Logo design</p>
+        <h2 class="anton split">Logo <em>folio</em></h2>
+      </div>
+      <p>Identities built from a simple idea, a considered palette and type that feels like the brand. Hover a swatch to see the colour.</p>
+    </div>
+    <div class="logo-row">
+      <article class="lcard rv" data-tilt>
+        <button class="art" type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/0754cc252412211.6a4eb4efd441b.jpg" data-cap="Everup Lady · Logo &amp; packaging" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0754cc252412211.6a4eb4efd441b.jpg" alt="Everup Lady logo presentation with colour palette and packaging" loading="lazy"></button>
+        <div class="body">
+          <h3>Everup <span class="script">lady</span></h3>
+          <p>A soft, elegant logo that reflects comfort, confidence and feminine care. Flowing typography paired with a delicate bird symbol conveys grace, freedom and positivity.</p>
+          <div class="swatches"><span class="sw"><i style="background:#25285F"></i>#25285F</span><span class="sw"><i style="background:#9BB0DF"></i>#9BB0DF</span><span class="sw"><i style="background:#FCE1F4"></i>#FCE1F4</span></div>
+        </div>
+      </article>
+      <article class="lcard rv" style="--d:.12s" data-tilt>
+        <button class="art" type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/adfc26252412211.6a4eb4efd2474.jpg" data-cap="Kraunch · Logo &amp; packaging" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/adfc26252412211.6a4eb4efd2474.jpg" alt="Kraunch logo presentation with colour palette and snack packaging" loading="lazy"></button>
+        <div class="body">
+          <h3>Kraunch</h3>
+          <p>Modern simplicity with organic tones, made for nutritious, premium food products. The bold wordmark gives the brand a fresh, reliable and approachable image.</p>
+          <div class="swatches"><span class="sw"><i style="background:#D1C495"></i>#D1C495</span><span class="sw"><i style="background:#045B33"></i>#045B33</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="logo-solo">
+      <button class="mark rv" type="button" data-lb="assets/everup-logo.jpg" data-cap="Everup Lady · Primary logo" data-cursor><img src="assets/everup-logo.jpg" alt="Everup Lady script logo with a line-art bird on a soft sky gradient" loading="lazy"></button>
+      <div class="process rv" style="--d:.12s">
+        <h3>How I build <span class="script">a mark</span></h3>
+        <ol class="steps">
+          <li><b>01</b><span>Understand the brand, its audience and the feeling it should leave.</span></li>
+          <li><b>02</b><span>Sketch symbols and type directions in Illustrator.</span></li>
+          <li><b>03</b><span>Lock the palette and test it on packaging and social posts.</span></li>
+          <li><b>04</b><span>Deliver a clean logo kit ready for print and digital.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGING -->
+<section class="sec" id="packaging" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="num">03</span>Packaging design</p>
+        <h2 class="anton split">Made for the <em>shelf</em></h2>
+      </div>
+    </div>
+    <div class="pack">
+      <button class="hero-pack rv" type="button" data-lb="assets/dubai-kunafa.jpg" data-cap="Dubai Kunafa Candy · Desi Mastaani" data-cursor><img id="packPar" src="assets/dubai-kunafa.jpg" alt="Dubai Kunafa Candy box rising out of a milk splash with pistachios" loading="lazy"></button>
+      <div class="copy rv" style="--d:.12s">
+        <h3>Dubai <em>Kunafa</em> candy</h3>
+        <p>Box design for Desi Mastaani’s pistachio kunafa candy: a deep green carton with gold script, a hand-drawn texture and an appetising cut-away of the bar, staged in a creamy milk splash for the launch visuals.</p>
+        <ul class="facts"><li>Carton design</li><li>Product render</li><li>Launch visual</li></ul>
+        <button class="wide" type="button" data-lb="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/e2740a252412211.6a4eb4efd1c6d.jpg" data-cap="Dubai Kunafa · Packaging presentation" data-cursor><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e2740a252412211.6a4eb4efd1c6d.jpg" alt="Packaging presentation showing the Dubai Kunafa box from two angles" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="sec videos" id="videos">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="num">04</span>Motion &amp; reels</p>
+        <h2 class="anton split">Designs that <em>move</em></h2>
+      </div>
+      <p>Vertical reels and Meta ads for Instagram. They play as you scroll — tap the speaker to hear them.</p>
+    </div>
+    <div class="reels">
+      <figure class="reel rv" style="margin:0">
+        <div class="phone"><video src="assets/midnight-venom.mp4" poster="assets/midnight-venom-poster.jpg" muted loop playsinline preload="metadata" aria-label="Midnight Venom product reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
+        <figcaption><b>Midnight Venom</b><span>hola. fragrance · Product reel</span></figcaption>
+      </figure>
+      <figure class="reel rv" style="margin:0;--d:.12s">
+        <div class="phone"><video src="assets/reel-01.mp4" poster="assets/reel-01-poster.jpg" muted loop playsinline preload="metadata" aria-label="What to gift this Dhanteras reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
+        <figcaption><b>What to gift this Dhanteras</b><span>Festive gift guide · Instagram reel</span></figcaption>
+      </figure>
+      <figure class="reel rv" style="margin:0;--d:.24s">
+        <div class="phone"><video src="assets/meta-ad.mp4" poster="assets/meta-ad-poster.jpg" muted loop playsinline preload="metadata" aria-label="Desi Mastaani franchise Meta ad"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
+        <figcaption><b>Build a business</b><span>Desi Mastaani · Meta ad</span></figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" style="max-width: 1320px; margin: 0 auto; padding: 140px 24px 120px">
-<div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
-<div style="flex: 1 1 340px; max-width: 480px; position: relative">
-<div class="portrait" style="border-radius: 240px 240px 28px 28px; overflow: hidden; aspect-ratio: 3/4; background: #1A1915">
-<img src="assets/shubham.jpg" alt="Portrait of Shubham Patel" style="width: 100%; height: 100%; object-fit: cover; display: block">
-</div>
-<div class="spin" style="position: absolute; right: -18px; top: 30px; width: 96px; height: 96px; border-radius: 50%; background: #FF6A33; display: grid; place-items: center; animation-duration: 18s" aria-hidden="true">
-<svg width="44" height="44" viewBox="0 0 24 24" fill="#0E0D0B"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"></path></svg>
-</div>
-</div>
-<div class="rv" style="flex: 999 1 480px; min-width: 0">
-<p style="margin: 0 0 14px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #FF6A33">(03) About me</p>
-<h2 class="syne" style="margin: 0; font-weight: 800; font-size: clamp(40px, 5vw, 76px); line-height: .98; letter-spacing: -.04em">Hi, I’m Shubham<span style="color: #FF6A33">.</span><br><span class="serif" style="font-weight: 400; letter-spacing: -.01em; color: #D9D4C9">I make brands look hungry-worthy.</span></h2>
-<div class="grow" style="height: 2px; background: #FF6A33; margin: 36px 0; transform-origin: left"></div>
-<p style="margin: 0 0 18px; font-size: 19px; line-height: 1.65; color: #D9D4C9; max-width: 640px">I’m a graphic designer who loves the moment a product becomes a story. My work spans social media campaigns, packaging, logos and short-form motion — for snack brands, fragrance labels and jewellers who want to stand out in a crowded feed.</p>
-<p style="margin: 0 0 32px; font-size: 19px; line-height: 1.65; color: #D9D4C9; max-width: 640px">I blend bold typography, rich product photography and AI-assisted visuals to craft campaigns that feel premium, playful and unmistakably on-brand.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 10px">
-<span class="skill">Adobe Photoshop</span><span class="skill">Adobe Illustrator</span><span class="skill">Adobe Firefly</span><span class="skill">Premiere Pro</span><span class="skill">Packaging</span><span class="skill">Social Ads</span><span class="skill">Logo Design</span><span class="skill">Motion Reels</span>
-</div>
-</div>
-</div>
+<section class="sec" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait rv">
+      <div class="frame"><img src="assets/shubham.jpg" alt="Portrait of Shubham Patel" loading="lazy"></div>
+      <div class="stamp"><b>1+ yr</b><span>Graphic designer</span></div>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow"><span class="num">05</span>About me</p>
+      <h2 class="split">Hi, I’m Shubham <span class="script">nice to meet you</span></h2>
+      <p class="bio rv">I’m a graphic designer from Rajkot specialising in social media creatives, advertising visuals and brand communication. I’ve worked with brands across food, fragrance, jewellery, healthcare, logistics and construction — creating impactful designs that help businesses connect with their audience and strengthen their visual presence.</p>
+      <div class="cols">
+        <div class="rv">
+          <h4>Experience</h4>
+          <ul class="tl"><li><b>Graphic Designer · Stryde Communication</b><span>Social media campaigns, ad creatives and brand communication for clients across industries</span></li></ul>
+        </div>
+        <div class="rv" style="--d:.12s">
+          <h4>Education</h4>
+          <ul class="tl"><li><b>Master of Computer Applications</b><span>2023 – 2024</span></li><li><b>Bachelor of Computer Applications</b><span>2020 – 2023</span></li></ul>
+        </div>
+      </div>
+      <div class="tools rv">
+        <span class="tool t-ai" title="Adobe Illustrator">Ai</span>
+        <span class="tool t-ps" title="Adobe Photoshop">Ps</span>
+        <span class="tool t-pr" title="Adobe Premiere Pro">Pr</span>
+        <small>Illustrator · Photoshop · Premiere Pro</small>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="border-top: 1px solid #24221D; padding: 120px 24px 48px">
-<div class="rv" style="max-width: 1320px; margin: 0 auto">
-<p style="margin: 0 0 22px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: #FF6A33">(04) Contact</p>
-<h2 class="syne" style="margin: 0; font-weight: 800; font-size: clamp(56px, 10vw, 168px); line-height: .9; letter-spacing: -.05em; text-transform: uppercase">Let’s make<br>something <span class="serif" style="text-transform: none; font-weight: 400; color: #FF6A33">loud</span><span class="caret" style="color: #FF6A33">_</span></h2>
-<div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between">
-<a class="mail" href="mailto:shubhampatel28702@gmail.com" style="font-size: clamp(22px, 3.2vw, 44px); letter-spacing: -.02em; overflow-wrap: anywhere">shubhampatel28702@gmail.com</a>
-<a class="cta" href="mailto:shubhampatel28702@gmail.com?subject=Project%20enquiry">Start a project
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
-</a>
-</div>
-<footer style="margin-top: 120px; padding-top: 28px; border-top: 1px solid #24221D; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #A8A296">
-<span>© 2026 Shubham Patel. All rights reserved.</span>
-<a href="#top" style="color: #A8A296">Back to top ↑</a>
-</footer>
-</div>
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num" style="color:var(--paper)">06</span>Contact</p>
+    <h2 class="split">Let’s create <span class="script">something</span> loud</h2>
+    <a class="mail" href="mailto:shubhampatel28702@gmail.com">shubhampatel28702@gmail.com</a>
+    <div class="socials">
+      <a class="btn" href="mailto:shubhampatel28702@gmail.com?subject=Project%20enquiry" data-magnetic>Start a project
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a href="https://www.linkedin.com/in/shubhampatel028" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+      <a href="https://www.behance.net/shubhampatel155" target="_blank" rel="noopener" data-magnetic>Behance ↗</a>
+    </div>
+    <footer><span>© 2026 Shubham Patel · Rajkot, India</span><a href="#top">Back to top ↑</a></footer>
+  </div>
 </section>
+</main>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" type="button" aria-label="Close"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="nav-b prev" type="button" aria-label="Previous image"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <img alt="">
+  <button class="nav-b next" type="button" aria-label="Next image"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+  <p></p>
 </div>
 
 <script>
-document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;
-document.querySelectorAll('.chip').forEach(function(x){var on=x===b;x.classList.toggle('chip-on',on);x.setAttribute('aria-pressed',on)});
-document.querySelectorAll('#wgrid .work').forEach(function(c){c.style.display=(f==='all'||c.dataset.cat===f)?'':'none'});});});
+(function(){
+  var root=document.documentElement, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* preloader */
+  var c=document.getElementById('count'), n=0, start=performance.now(), dur=reduce?10:1300;
+  function tick(t){n=Math.min(100,Math.round((t-start)/dur*100));c.textContent=n;if(n<100)requestAnimationFrame(tick);else setTimeout(function(){root.classList.add('loaded')},150)}
+  requestAnimationFrame(tick);
+  setTimeout(function(){root.classList.add('loaded')},3500);
+
+  /* split headings into words */
+  document.querySelectorAll('.split').forEach(function(el){
+    var i=0;
+    (function walk(node){
+      Array.from(node.childNodes).forEach(function(ch){
+        if(ch.nodeType===3){
+          var frag=document.createDocumentFragment();
+          ch.textContent.split(/(\s+)/).forEach(function(p){
+            if(!p)return;
+            if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(p));return}
+            var w=document.createElement('span');w.className='w';var s=document.createElement('span');s.textContent=p;s.style.setProperty('--i',i++);w.appendChild(s);frag.appendChild(w);
+          });
+          node.replaceChild(frag,ch);
+        } else if(ch.nodeType===1){walk(ch)}
+      });
+    })(el);
+  });
+
+  /* reveal on scroll */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv,.split,.portrait').forEach(function(el){io.observe(el)});
+
+  /* nav + progress */
+  var nav=document.querySelector('.nav'), prog=document.querySelector('.progress'), lastY=0;
+  /* horizontal series */
+  var series=document.getElementById('series'), track=document.getElementById('sTrack'), bar=document.getElementById('sBar'), idx=document.getElementById('sIdx');
+  var slides=track.children.length, pack=document.getElementById('packPar'), stackFigs=document.querySelectorAll('.stack figure');
+  function sizeSeries(){
+    if(innerWidth<=760){series.style.height='';track.style.transform='';return}
+    var dist=track.scrollWidth-innerWidth+Math.max(24,(innerWidth-1320)/2+24);
+    series.style.height=(innerHeight+dist)+'px';series.dataset.dist=dist;
+  }
+  function onScroll(){
+    var y=scrollY, h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+    nav.classList.toggle('scrolled',y>40);
+    nav.classList.toggle('hide',y>lastY&&y>500);lastY=y;
+    if(innerWidth>760){
+      var r=series.getBoundingClientRect(), dist=+series.dataset.dist||0, p=Math.min(1,Math.max(0,-r.top/(series.offsetHeight-innerHeight)));
+      track.style.transform='translate3d('+(-p*dist)+'px,0,0)';
+      bar.style.transform='scaleX('+p+')';
+      idx.textContent=('0'+Math.min(slides,Math.floor(p*slides*.999)+1)).slice(-2);
+    }
+    if(pack&&!reduce){var pr=pack.parentNode.getBoundingClientRect();pack.style.transform='translateY('+((pr.top-innerHeight/2)*-.08)+'px)'}
+    if(!reduce&&y<innerHeight){stackFigs.forEach(function(f){f.style.translate='0 '+(-y*(+f.dataset.depth)/100)+'px'})}
+  }
+  addEventListener('scroll',function(){requestAnimationFrame(onScroll)},{passive:true});
+  addEventListener('resize',function(){sizeSeries();onScroll()});
+  addEventListener('load',function(){sizeSeries();onScroll()});
+  sizeSeries();onScroll();
+
+  /* filter */
+  var chips=document.querySelectorAll('.chip'), cards=document.querySelectorAll('#postGrid .card');
+  chips.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.dataset.f;chips.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    cards.forEach(function(cd,i){var show=f==='all'||cd.dataset.cat===f;cd.classList.toggle('hide',!show);
+      if(show&&!reduce){cd.animate([{opacity:0,transform:'translateY(30px) scale(.96)'},{opacity:1,transform:'none'}],{duration:600,delay:i*60,easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'})}});
+  })});
+
+  /* cursor */
+  var cur=document.querySelector('.cursor'), mx=innerWidth/2, my=innerHeight/2, cx=mx, cy=my;
+  if(matchMedia('(hover:hover)').matches&&!reduce){
+    addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
+    (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;cur.style.transform='translate3d('+cx+'px,'+cy+'px,0)';requestAnimationFrame(loop)})();
+    document.querySelectorAll('[data-cursor]').forEach(function(el){el.addEventListener('mouseenter',function(){cur.classList.add('big')});el.addEventListener('mouseleave',function(){cur.classList.remove('big')})});
+    /* magnetic */
+    document.querySelectorAll('[data-magnetic]').forEach(function(el){
+      el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();el.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'});
+      el.addEventListener('mouseleave',function(){el.style.transform=''});
+    });
+    /* tilt */
+    document.querySelectorAll('[data-tilt]').forEach(function(el){
+      el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform='perspective(1000px) rotateY('+(x*7)+'deg) rotateX('+(-y*7)+'deg) translateY(-6px)'});
+      el.addEventListener('mouseleave',function(){el.style.transform=''});
+    });
+  } else {cur.style.display='none'}
+
+  /* videos: play when visible, sound toggle */
+  var vids=document.querySelectorAll('.reel video');
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{threshold:.35});
+  vids.forEach(function(v){vio.observe(v)});
+  var on='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>';
+  document.querySelectorAll('.sound').forEach(function(b){var off=b.innerHTML;b.addEventListener('click',function(){
+    var v=b.parentNode.querySelector('video'), willOn=v.muted;
+    vids.forEach(function(o){o.muted=true});document.querySelectorAll('.sound').forEach(function(x){x.innerHTML=off;x.setAttribute('aria-label','Turn sound on')});
+    if(willOn){v.muted=false;v.play();b.innerHTML=on;b.setAttribute('aria-label','Turn sound off')}
+  })});
+
+  /* lightbox */
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('p'), items=Array.from(document.querySelectorAll('[data-lb]')), cur_i=0, lastFocus=null;
+  function show(i){cur_i=(i+items.length)%items.length;var it=items[cur_i];lbImg.src=it.dataset.lb;lbImg.alt=(it.querySelector('img')||{}).alt||'';lbCap.textContent=it.dataset.cap||''}
+  function open(i){lastFocus=document.activeElement;show(i);lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.x').focus()}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+  items.forEach(function(it,i){it.addEventListener('click',function(e){e.preventDefault();open(i)})});
+  lb.querySelector('.x').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(){show(cur_i-1)});
+  lb.querySelector('.next').addEventListener('click',function(){show(cur_i+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur_i-1);if(e.key==='ArrowRight')show(cur_i+1)});
+})();
 </script>
-</body></html>
+</body>
+</html>
