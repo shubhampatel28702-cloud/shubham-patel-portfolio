@@ -170,7 +170,7 @@ section{position:relative;z-index:2}
 .series-count{font:400 22px/1 'Anton',sans-serif;color:var(--muted)}
 .series-count b{color:var(--red);font-weight:400}
 .series-track{display:flex;gap:32px;padding-left:max(24px,calc((100vw - 1320px)/2 + 24px));will-change:transform}
-.slide{flex:0 0 min(72vw,980px);margin:0}
+.slide{flex:0 0 min(72vw,980px,calc((100vh - 250px)*16/9));margin:0}
 .slide button{display:block;width:100%;padding:0;border:0;border-radius:22px;overflow:hidden;background:var(--paper-2);cursor:zoom-in;box-shadow:0 30px 60px -30px rgba(60,20,25,.45)}
 .slide img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform 1.2s var(--ease)}
 .slide button:hover img{transform:scale(1.04)}
