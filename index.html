@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
@@ -30,7 +30,7 @@ button{font:inherit}
 ::selection{background:var(--red);color:var(--paper)}
 .wrap{max-width:1320px;margin:0 auto;padding:0 24px}
 .anton{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.005em;text-transform:uppercase}
-.script{font-family:'Great Vibes',cursive;font-weight:400;text-transform:none;letter-spacing:0}
+.script{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;font-size:1em!important;color:var(--red)}
 .eyebrow{font:600 13px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--red-d)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 /* paper grain */
@@ -78,15 +78,15 @@ header.nav.hide{transform:translateY(-100%)}
 .loops path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
 .loaded .loops path{animation:draw 2.6s var(--ease) .9s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.hero h1{margin:0;font-size:clamp(72px,11vw,188px);line-height:.84;color:var(--red);display:flex;flex-direction:column}
+.hero h1{margin:0;font-size:clamp(64px,10vw,172px);line-height:.84;color:var(--red);display:flex;flex-direction:column}
 .hero h1 .row{display:flex;gap:.04em;overflow:hidden;padding:.04em 0 0}
 .hero h1 .row .n{color:var(--ink)}
 .ch{display:inline-block}
 .js .ch{transform:translateY(105%)}
 .loaded .ch{transform:none;transition:transform 1.1s var(--ease)}
-.hero .sig{font-size:clamp(40px,6vw,88px);color:var(--ink);line-height:1;margin:-.15em 0 0 .2em;display:block}
-.js .hero .sig{opacity:0;transform:translateY(20px) rotate(-4deg)}
-.loaded .hero .sig{opacity:1;transform:rotate(-4deg);transition:all 1.2s var(--ease) 1.2s}
+.hero .sig{font-size:clamp(20px,2.2vw,32px);color:var(--muted);line-height:1;margin:22px 0 0;display:block;letter-spacing:.08em}
+.js .hero .sig{opacity:0;transform:translateY(20px)}
+.loaded .hero .sig{opacity:1;transform:none;transition:all 1.2s var(--ease) 1.2s}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center;width:100%}
 .hero p.lead{max-width:520px;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);margin:34px 0 0}
 .js .fade-in{opacity:0;transform:translateY(24px)}
@@ -343,11 +343,8 @@ footer a{color:var(--muted)}
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow fade-in" style="transition-delay:.5s">Graphic Designer · Rajkot, India</p>
-      <h1 class="anton" aria-label="Portfolio 2026">
-        <span class="row"><span class="ch" style="transition-delay:.15s">P</span><span class="ch" style="transition-delay:.2s">o</span><span class="ch" style="transition-delay:.25s">r</span><span class="ch" style="transition-delay:.3s">t</span><span class="ch n" style="transition-delay:.4s">2</span><span class="ch n" style="transition-delay:.45s">0</span></span>
-        <span class="row"><span class="ch" style="transition-delay:.3s">f</span><span class="ch" style="transition-delay:.35s">o</span><span class="ch" style="transition-delay:.4s">l</span><span class="ch" style="transition-delay:.45s">i</span><span class="ch" style="transition-delay:.5s">o</span><span class="ch n" style="transition-delay:.6s">2</span><span class="ch n" style="transition-delay:.65s">6</span></span>
-      </h1>
-      <span class="script sig">Shubham Patel</span>
+      <h1 class="anton" aria-label="Shubham Patel"><span class="row"><span class="ch" style="transition-delay:0.15s">S</span><span class="ch" style="transition-delay:0.20s">h</span><span class="ch" style="transition-delay:0.25s">u</span><span class="ch" style="transition-delay:0.30s">b</span><span class="ch" style="transition-delay:0.35s">h</span><span class="ch" style="transition-delay:0.40s">a</span><span class="ch" style="transition-delay:0.45s">m</span></span><span class="row"><span class="ch n" style="transition-delay:0.40s">P</span><span class="ch n" style="transition-delay:0.45s">a</span><span class="ch n" style="transition-delay:0.50s">t</span><span class="ch n" style="transition-delay:0.55s">e</span><span class="ch n" style="transition-delay:0.60s">l</span><span class="ch" style="transition-delay:.7s;color:var(--red)">.</span></span></h1>
+      <span class="sig anton">Graphic Designer — Portfolio 2026</span>
       <p class="lead fade-in" style="transition-delay:1.4s">I design social media creatives, advertising visuals and brand identities that help businesses connect with their audience — from scroll-stopping posts to logos and packaging.</p>
       <div class="cta-row fade-in" style="transition-delay:1.55s">
         <a class="btn" href="#posts" data-magnetic>View my work
