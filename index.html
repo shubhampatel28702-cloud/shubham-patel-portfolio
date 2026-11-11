@@ -235,7 +235,7 @@ section{position:relative;z-index:2}
 .videos .eyebrow{color:#B8410F}
 .videos .head h2 em{color:#C2410C}
 .reels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start}
-.reels .reel:nth-child(2){margin-top:110px}
+.reels .reel:nth-child(3n+2){margin-top:110px}
 .phone{position:relative;padding:10px;border-radius:40px;background:var(--night-2);box-shadow:0 0 0 1.5px #3A372F,0 40px 80px -30px rgba(255,106,51,.45);transition:transform .7s var(--ease)}
 .phone::before{content:"";position:absolute;top:20px;left:50%;translate:-50% 0;width:70px;height:6px;border-radius:6px;background:#000;z-index:2;opacity:.7}
 .reel:hover .phone{transform:translateY(-14px) rotate(-1.5deg)}
@@ -245,7 +245,7 @@ section{position:relative;z-index:2}
 .reel figcaption{margin-top:22px}
 .reel figcaption b{display:block;font:400 28px/1 'Anton',sans-serif;text-transform:uppercase}
 .reel figcaption span{color:#4A463D;font-size:15px}
-@media (max-width:900px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.reels .reel:nth-child(2){margin-top:0}}
+@media (max-width:900px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.reels .reel:nth-child(3n+2){margin-top:0}}
 @media (max-width:560px){.reels{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
 
 /* ---------- about ---------- */
@@ -512,18 +512,30 @@ footer a{color:var(--muted)}
         <p class="eyebrow"><span class="num">04</span>Motion &amp; reels</p>
         <h2 class="anton split">Designs that <em>move</em></h2>
       </div>
-      <p>Vertical reels and Meta ads for Instagram. They play as you scroll — tap the speaker to hear them.</p>
+      <p>Vertical reels and Meta ads for Instagram — LifeWear stories, product films and festive campaigns. They play as you scroll; tap the speaker to hear them.</p>
     </div>
     <div class="reels">
       <figure class="reel rv" style="margin:0">
+        <div class="phone"><video src="assets/lifewear-revised.mp4" poster="assets/lifewear-revised-poster.jpg" muted loop playsinline preload="metadata" aria-label="LifeWear knee cap reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
+        <figcaption><b>Winter isn’t here yet</b><span>LifeWear · Knee cap · Character reel</span></figcaption>
+      </figure>
+      <figure class="reel rv" style="margin:0;--d:0.12s">
         <div class="phone"><video src="assets/midnight-venom.mp4" poster="assets/midnight-venom-poster.jpg" muted loop playsinline preload="metadata" aria-label="Midnight Venom product reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
         <figcaption><b>Midnight Venom</b><span>hola. fragrance · Product reel</span></figcaption>
       </figure>
-      <figure class="reel rv" style="margin:0;--d:.12s">
+      <figure class="reel rv" style="margin:0;--d:0.24s">
+        <div class="phone"><video src="assets/lifewear-heat-belt.mp4" poster="assets/lifewear-heat-belt-poster.jpg" muted loop playsinline preload="metadata" aria-label="LifeWear heating belt reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
+        <figcaption><b>Your back deserves warmth</b><span>LifeWear · Heating belt · Story reel</span></figcaption>
+      </figure>
+      <figure class="reel rv" style="margin:0">
         <div class="phone"><video src="assets/reel-01.mp4" poster="assets/reel-01-poster.jpg" muted loop playsinline preload="metadata" aria-label="What to gift this Dhanteras reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
         <figcaption><b>What to gift this Dhanteras</b><span>Festive gift guide · Instagram reel</span></figcaption>
       </figure>
-      <figure class="reel rv" style="margin:0;--d:.24s">
+      <figure class="reel rv" style="margin:0;--d:0.12s">
+        <div class="phone"><video src="assets/lifewear-back-rest.mp4" poster="assets/lifewear-back-rest-poster.jpg" muted loop playsinline preload="metadata" aria-label="LifeWear back rest reel"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
+        <figcaption><b>Sit right, feel better</b><span>LifeWear · Back rest · Product reel</span></figcaption>
+      </figure>
+      <figure class="reel rv" style="margin:0;--d:0.24s">
         <div class="phone"><video src="assets/meta-ad.mp4" poster="assets/meta-ad-poster.jpg" muted loop playsinline preload="metadata" aria-label="Desi Mastaani franchise Meta ad"></video><button class="sound" type="button" aria-label="Turn sound on"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6M17 9l6 6"/></svg></button></div>
         <figcaption><b>Build a business</b><span>Desi Mastaani · Meta ad</span></figcaption>
       </figure>
