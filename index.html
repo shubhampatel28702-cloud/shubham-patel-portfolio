@@ -248,6 +248,52 @@ section{position:relative;z-index:2}
 @media (max-width:900px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.reels .reel:nth-child(3n+2){margin-top:0}}
 @media (max-width:560px){.reels{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
 
+/* ---------- print / catalogue ---------- */
+.print{overflow:hidden}
+.cat{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:56px;align-items:center;margin-bottom:130px}
+.cat.rev{grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr)}
+.cat.rev .cat-copy{order:2}
+.cat-copy h3{margin:14px 0 0;font:400 clamp(48px,6vw,96px)/.88 'Anton',sans-serif;text-transform:uppercase}
+.cat-copy h3 em{font-style:normal;color:var(--red)}
+.cat-copy p{color:var(--ink-2);max-width:480px;margin:22px 0 0}
+.cat-copy .facts{margin-top:24px}
+.cat-tag{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--red);color:var(--paper);font:600 12px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.stage{position:relative;perspective:2600px;padding:30px 0 10px}
+.stage::after{content:"";position:absolute;left:12%;right:12%;bottom:-6px;height:40px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.65),transparent);filter:blur(6px);z-index:0}
+.book{position:relative;z-index:1;width:min(100%,860px);margin:0 auto;aspect-ratio:calc(2 * var(--ar));transform-style:preserve-3d;transition:transform 1s var(--ease);cursor:pointer;outline:none}
+.book.closed-front{transform:translateX(-25%) rotateX(8deg) rotateZ(-2deg)}
+.book.closed-back{transform:translateX(25%) rotateX(8deg) rotateZ(2deg)}
+.book.open{transform:rotateX(14deg)}
+.book:focus-visible{box-shadow:0 0 0 3px var(--red)}
+.leaf{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;transition:transform 1.1s cubic-bezier(.45,.05,.2,1)}
+.leaf.flipped{transform:rotateY(-180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;background:#fff;outline:1px solid rgba(243,239,230,.14);outline-offset:-1px}
+.face img{width:100%;height:100%;object-fit:cover;pointer-events:none;user-select:none}
+.face.front{border-radius:2px 8px 8px 2px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+.face.back{transform:rotateY(180deg);border-radius:8px 2px 2px 8px}
+.face.front::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.06) 6%,transparent 14%)}
+.face.back::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(0,0,0,.28),rgba(0,0,0,.06) 6%,transparent 14%)}
+.leaf.cover .face.front{border-radius:3px 10px 10px 3px}
+.leaf.cover .face.front::after{background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.12) 3%,transparent 8%,transparent 70%,rgba(255,255,255,.08))}
+.book::before{content:"";position:absolute;left:50%;top:1.5%;bottom:1.5%;width:calc(50% + 6px);border-radius:0 10px 10px 0;background:repeating-linear-gradient(90deg,#e9e4da 0 1px,#fff 1px 3px);transform:translateZ(-6px) translateX(2px);opacity:.9}
+.book.closed-back::before{left:auto;right:50%;transform:translateZ(-6px) translateX(-2px);border-radius:10px 0 0 10px}
+.book-ui{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:34px;position:relative;z-index:2}
+.book-ui button{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease)}
+.book-ui button:hover:not(:disabled){background:var(--red);border-color:var(--red);color:var(--paper);transform:scale(1.08)}
+.book-ui button:disabled{opacity:.3;cursor:default}
+.book-ui .pg{min-width:150px;text-align:center;font:400 20px/1 'Anton',sans-serif;letter-spacing:.04em;color:var(--muted)}
+.book-ui .pg b{color:var(--red);font-weight:400}
+.book-hint{text-align:center;color:var(--muted);font-size:14px;margin-top:12px}
+.pages-strip{margin-top:10px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.pages-strip .track{gap:22px;animation-duration:46s}
+.pages-strip button{flex:0 0 auto;width:170px;padding:0;border:0;border-radius:8px;overflow:hidden;background:#fff;cursor:zoom-in;box-shadow:0 20px 40px -20px rgba(0,0,0,.8);transition:transform .5s var(--ease)}
+.pages-strip button:nth-child(odd){rotate:-2deg}.pages-strip button:nth-child(even){rotate:2deg}
+.pages-strip button:hover{transform:translateY(-10px) scale(1.04)}
+.pages-strip img{width:100%;aspect-ratio:.74;object-fit:cover}
+.pages-strip:hover .track{animation-play-state:paused}
+@media (max-width:980px){.cat,.cat.rev{grid-template-columns:1fr;gap:30px}.cat.rev .cat-copy{order:0}}
+@media (max-width:560px){.book.closed-front{transform:translateX(-25%)}.book.closed-back{transform:translateX(25%)}.book.open{transform:none}.book-ui .pg{min-width:110px;font-size:17px}}
+
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
 .portrait{position:relative}
@@ -326,6 +372,7 @@ footer a{color:var(--muted)}
         <li><a href="#logos"><span data-t="Logos">Logos</span></a></li>
         <li><a href="#packaging"><span data-t="Packaging">Packaging</span></a></li>
         <li><a href="#videos"><span data-t="Videos">Videos</span></a></li>
+        <li><a href="#print"><span data-t="Print">Print</span></a></li>
         <li><a href="#about"><span data-t="About">About</span></a></li>
       </ul>
     </nav>
@@ -543,6 +590,48 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<!-- PRINT -->
+<section class="sec print" id="print">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="num">05</span>Print &amp; catalogue</p>
+        <h2 class="anton split">Made for <em>print</em></h2>
+      </div>
+      <p>Multi-page product catalogues designed for print — layout, typography, product photography and spec pages. Flip through them below.</p>
+    </div>
+
+    <div class="cat">
+      <div class="cat-copy rv">
+        <span class="cat-tag">Hardware · A4 · 24 pages</span>
+        <h3>Kart <em>product</em> catalogue</h3>
+        <p>A premium black-and-gold catalogue for Kart — “Har Ghar Ka Sukoon”. Each range opens with a bold chapter page: door closers, telescopic channels, drawer systems, 3D hinges, bed fittings, gas pumps and locks, followed by clean product pages with finishes and specs.</p>
+        <ul class="facts"><li>Layout design</li><li>Product pages</li><li>Print-ready</li></ul>
+      </div>
+      <div class="rv" style="--d:.12s">
+        <div class="stage"><div class="book" tabindex="0" role="region" aria-label="Kart catalogue flipbook" data-book="kart" data-pages='["01","02","03","04","05","06","07","10","11","12","13","18","19","22","23","24"]' style="--ar:0.7069"></div></div>
+        <div class="book-ui"><button type="button" class="b-prev" aria-label="Previous page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><span class="pg" aria-live="polite">Cover</span><button type="button" class="b-next" aria-label="Next page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        <p class="book-hint">Click, swipe or use ← → to turn the pages</p>
+      </div>
+    </div>
+
+    <div class="cat rev">
+      <div class="cat-copy rv">
+        <span class="cat-tag">Tiles · 62 pages · French</span>
+        <h3>Liberta <em>tile</em> catalogue</h3>
+        <p>A 62-page tile catalogue in French with the Formmoules genie on the cover. Every collection — Carving, Statuario, Wood, Matt, Inky &amp; Rich Gloss — gets a full room-scene spread with a spec table, followed by swatch pages and playful retro speech-bubble characters.</p>
+        <ul class="facts"><li>Catalogue design</li><li>Spec tables</li><li>PDF/X print file</li></ul>
+      </div>
+      <div class="rv" style="--d:.12s">
+        <div class="stage"><div class="book" tabindex="0" role="region" aria-label="Liberta catalogue flipbook" data-book="lib" data-pages='["01","03","04","11","12","27","28","33","34","39","40","49","50","62"]' style="--ar:0.7678"></div></div>
+        <div class="book-ui"><button type="button" class="b-prev" aria-label="Previous page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><span class="pg" aria-live="polite">Cover</span><button type="button" class="b-next" aria-label="Next page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+        <p class="book-hint">Click, swipe or use ← → to turn the pages</p>
+      </div>
+    </div>
+  </div>
+  <div class="pages-strip" aria-label="More catalogue pages"><div class="track"><button type="button" data-lb="assets/print/lib-06.jpg" data-cap="Liberta catalogue · Room scene" data-cursor><img src="assets/print/lib-06.jpg" alt="Liberta catalogue · Room scene" loading="lazy"></button><button type="button" data-lb="assets/print/kart-15.jpg" data-cap="Kart catalogue · 3D auto hinges" data-cursor><img src="assets/print/kart-15.jpg" alt="Kart catalogue · 3D auto hinges" loading="lazy"></button><button type="button" data-lb="assets/print/lib-18.jpg" data-cap="Liberta catalogue · Lifestyle spread" data-cursor><img src="assets/print/lib-18.jpg" alt="Liberta catalogue · Lifestyle spread" loading="lazy"></button><button type="button" data-lb="assets/print/kart-21.jpg" data-cap="Kart catalogue · Secure locks" data-cursor><img src="assets/print/kart-21.jpg" alt="Kart catalogue · Secure locks" loading="lazy"></button><button type="button" data-lb="assets/print/lib-30.jpg" data-cap="Liberta catalogue · Marble collection" data-cursor><img src="assets/print/lib-30.jpg" alt="Liberta catalogue · Marble collection" loading="lazy"></button><button type="button" data-lb="assets/print/kart-12.jpg" data-cap="Kart catalogue · Telescopic channel" data-cursor><img src="assets/print/kart-12.jpg" alt="Kart catalogue · Telescopic channel" loading="lazy"></button><button type="button" data-lb="assets/print/lib-27.jpg" data-cap="Liberta catalogue · Statuario opener" data-cursor><img src="assets/print/lib-27.jpg" alt="Liberta catalogue · Statuario opener" loading="lazy"></button><button type="button" data-lb="assets/print/kart-06.jpg" data-cap="Kart catalogue · Door closer system" data-cursor><img src="assets/print/kart-06.jpg" alt="Kart catalogue · Door closer system" loading="lazy"></button><button type="button" data-lb="assets/print/lib-39.jpg" data-cap="Liberta catalogue · Matt collection" data-cursor><img src="assets/print/lib-39.jpg" alt="Liberta catalogue · Matt collection" loading="lazy"></button><button type="button" data-lb="assets/print/kart-18.jpg" data-cap="Kart catalogue · Bed fittings" data-cursor><img src="assets/print/kart-18.jpg" alt="Kart catalogue · Bed fittings" loading="lazy"></button><button type="button" data-lb="assets/print/lib-06.jpg" data-cap="Liberta catalogue · Room scene" data-cursor><img src="assets/print/lib-06.jpg" alt="Liberta catalogue · Room scene" loading="lazy"></button><button type="button" data-lb="assets/print/kart-15.jpg" data-cap="Kart catalogue · 3D auto hinges" data-cursor><img src="assets/print/kart-15.jpg" alt="Kart catalogue · 3D auto hinges" loading="lazy"></button><button type="button" data-lb="assets/print/lib-18.jpg" data-cap="Liberta catalogue · Lifestyle spread" data-cursor><img src="assets/print/lib-18.jpg" alt="Liberta catalogue · Lifestyle spread" loading="lazy"></button><button type="button" data-lb="assets/print/kart-21.jpg" data-cap="Kart catalogue · Secure locks" data-cursor><img src="assets/print/kart-21.jpg" alt="Kart catalogue · Secure locks" loading="lazy"></button><button type="button" data-lb="assets/print/lib-30.jpg" data-cap="Liberta catalogue · Marble collection" data-cursor><img src="assets/print/lib-30.jpg" alt="Liberta catalogue · Marble collection" loading="lazy"></button><button type="button" data-lb="assets/print/kart-12.jpg" data-cap="Kart catalogue · Telescopic channel" data-cursor><img src="assets/print/kart-12.jpg" alt="Kart catalogue · Telescopic channel" loading="lazy"></button><button type="button" data-lb="assets/print/lib-27.jpg" data-cap="Liberta catalogue · Statuario opener" data-cursor><img src="assets/print/lib-27.jpg" alt="Liberta catalogue · Statuario opener" loading="lazy"></button><button type="button" data-lb="assets/print/kart-06.jpg" data-cap="Kart catalogue · Door closer system" data-cursor><img src="assets/print/kart-06.jpg" alt="Kart catalogue · Door closer system" loading="lazy"></button><button type="button" data-lb="assets/print/lib-39.jpg" data-cap="Liberta catalogue · Matt collection" data-cursor><img src="assets/print/lib-39.jpg" alt="Liberta catalogue · Matt collection" loading="lazy"></button><button type="button" data-lb="assets/print/kart-18.jpg" data-cap="Kart catalogue · Bed fittings" data-cursor><img src="assets/print/kart-18.jpg" alt="Kart catalogue · Bed fittings" loading="lazy"></button></div></div>
+</section>
+
 <!-- ABOUT -->
 <section class="sec" id="about">
   <div class="wrap about-grid">
@@ -551,7 +640,7 @@ footer a{color:var(--muted)}
       <div class="stamp"><b>1+ yr</b><span>Graphic designer</span></div>
     </div>
     <div class="about-copy">
-      <p class="eyebrow"><span class="num">05</span>About me</p>
+      <p class="eyebrow"><span class="num">06</span>About me</p>
       <h2 class="split">Hi, I’m Shubham <span class="script">nice to meet you</span></h2>
       <p class="bio rv">I’m a graphic designer from Rajkot specialising in social media creatives, advertising visuals and brand communication. I’ve worked with brands across food, fragrance, jewellery, healthcare, logistics and construction — creating impactful designs that help businesses connect with their audience and strengthen their visual presence.</p>
       <div class="cols">
@@ -577,7 +666,7 @@ footer a{color:var(--muted)}
 <!-- CONTACT -->
 <section class="sec contact" id="contact">
   <div class="wrap">
-    <p class="eyebrow"><span class="num">06</span>Contact</p>
+    <p class="eyebrow"><span class="num">07</span>Contact</p>
     <h2 class="split">Let’s create <span class="script">something</span> loud</h2>
     <a class="mail" href="mailto:shubhampatel28702@gmail.com">shubhampatel28702@gmail.com</a>
     <div class="socials">
@@ -696,6 +785,34 @@ footer a{color:var(--muted)}
     vids.forEach(function(o){o.muted=true});document.querySelectorAll('.sound').forEach(function(x){x.innerHTML=off;x.setAttribute('aria-label','Turn sound on')});
     if(willOn){v.muted=false;v.play();b.innerHTML=on;b.setAttribute('aria-label','Turn sound off')}
   })});
+
+  /* flipbooks */
+  document.querySelectorAll('[data-book]').forEach(function(book){
+    var name=book.dataset.book, pages=JSON.parse(book.dataset.pages), n=pages.length/2, k=0, wrap=book.closest('.rv')||book.parentNode.parentNode;
+    var ui=wrap.querySelector('.book-ui'), prev=ui.querySelector('.b-prev'), next=ui.querySelector('.b-next'), pg=ui.querySelector('.pg');
+    var leaves=[];
+    for(var i=0;i<n;i++){
+      var lf=document.createElement('div');lf.className='leaf'+(i===0?' cover':'');
+      lf.innerHTML='<div class="face front"><img alt="" loading="lazy" src="assets/print/'+name+'-'+pages[2*i]+'.jpg"></div><div class="face back"><img alt="" loading="lazy" src="assets/print/'+name+'-'+pages[2*i+1]+'.jpg"></div>';
+      book.appendChild(lf);leaves.push(lf);
+    }
+    function render(active){
+      leaves.forEach(function(lf,i){var f=i<k;lf.classList.toggle('flipped',f);lf.style.zIndex=(i===active)?n+2:(f?i+1:n-i)});
+      book.className='book '+(k===0?'closed-front':k===n?'closed-back':'open');
+      prev.disabled=k===0;next.disabled=k===n;
+      pg.innerHTML=k===0?'Cover':k===n?'Back cover':'Spread <b>'+k+'</b> / '+(n-1);
+      if(active!=null)setTimeout(function(){render(null)},1100);
+    }
+    function go(d){var t=k+d;if(t<0||t>n)return;var a=d>0?k:k-1;k=t;render(a)}
+    prev.addEventListener('click',function(){go(-1)});next.addEventListener('click',function(){go(1)});
+    book.addEventListener('click',function(e){var r=book.getBoundingClientRect();go(e.clientX>r.left+r.width/2||k===0?1:-1)});
+    book.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){go(1);e.preventDefault()}if(e.key==='ArrowLeft'){go(-1);e.preventDefault()}});
+    var sx=null;book.addEventListener('pointerdown',function(e){sx=e.clientX});
+    book.addEventListener('pointerup',function(e){if(sx==null)return;var dx=e.clientX-sx;sx=null;if(Math.abs(dx)>40){e.stopPropagation();go(dx<0?1:-1);book.dataset.swiped=1;setTimeout(function(){delete book.dataset.swiped},50)}});
+    book.addEventListener('click',function(e){if(book.dataset.swiped)e.stopImmediatePropagation()},true);
+    render(null);
+    if(!reduce){var bio=new IntersectionObserver(function(es){if(es[0].isIntersecting){bio.disconnect();setTimeout(function(){if(k===0)go(1)},900)}},{threshold:.6});bio.observe(book)}
+  });
 
   /* lightbox */
   var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('p'), items=Array.from(document.querySelectorAll('[data-lb]')), cur_i=0, lastFocus=null;
